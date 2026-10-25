@@ -1,0 +1,214 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+enum Role {
+  SUPERADMIN
+  ADMIN
+  RECEPTIONIST
+}
+
+enum AppointmentStatus {
+  PENDING
+  CONFIRMED
+  RESCHEDULED
+  CANCELLED
+  COMPLETED
+  NO_SHOW
+}
+
+model AdminUser {
+  id           String    @id @default(cuid())
+  username     String    @unique
+  passwordHash String
+  salt         String
+  name         String
+  role         Role      @default(ADMIN)
+  createdAt    DateTime  @default(now())
+  lastLoginAt  DateTime?
+
+  auditLogs    AuditLog[]
+
+  @@map("admin_users")
+}
+
+model Doctor {
+  id                          String    @id @default(cuid())
+  slug                        String    @unique
+  name                        String
+  specialty                   String
+  qualifications              String
+  experienceYears             Int
+  bio                         String    @db.Text
+  photoUrl                    String?
+  isActive                    Boolean   @default(true)
+  isVerified                  Boolean   @default(true)
+  consultationDurationMinutes Int       @default(15)
+  bufferMinutes               Int       @default(5)
+  maxDailyBookings            Int       @default(30)
+  consultationFeeNote         String?
+  createdAt                   DateTime  @default(now())
+  updatedAt                   DateTime  @updatedAt
+
+  weeklySchedules             WeeklySchedule[]
+  scheduleExceptions          ScheduleException[]
+  appointments                Appointment[]
+  services                    DoctorService[]
+
+  @@map("doctors")
+}
+
+model Service {
+  id                           String    @id @default(cuid())
+  slug                         String    @unique
+  title                        String
+  category                     String
+  description                  String    @db.Text
+  isPublished                  Boolean   @default(false)
+  requiresHospitalConfirmation Boolean   @default(false)
+  durationMinutes              Int       @default(15)
+  createdAt                    DateTime  @default(now())
+  updatedAt                    DateTime  @updatedAt
+
+  doctors                      DoctorService[]
+  appointments                 Appointment[]
+
+  @@map("services")
+}
+
+model DoctorService {
+  id        String   @id @default(cuid())
+  doctorId  String
+  serviceId String
+  doctor    Doctor   @relation(fields: [doctorId], references: [id], onDelete: Cascade)
+  service   Service  @relation(fields: [serviceId], references: [id], onDelete: Cascade)
+
+  @@unique([doctorId, serviceId])
+  @@map("doctor_services")
+}
+
+model WeeklySchedule {
+  id        String   @id @default(cuid())
+  doctorId  String
+  dayOfWeek Int      // 0 (Sunday) to 6 (Saturday)
+  isWorking Boolean  @default(true)
+  shifts    Json     // Array of { startTime: "09:00", endTime: "13:00" }
+  updatedAt DateTime @updatedAt
+  doctor    Doctor   @relation(fields: [doctorId], references: [id], onDelete: Cascade)
+
+  @@unique([doctorId, dayOfWeek])
+  @@map("weekly_schedules")
+}
+
+model ScheduleException {
+  id           String   @id @default(cuid())
+  doctorId     String
+  date         String   // YYYY-MM-DD
+  isDayOff     Boolean  @default(true)
+  customShifts Json?    // Array of { startTime: "HH:MM", endTime: "HH:MM" }
+  reason       String?
+  createdAt    DateTime @default(now())
+  doctor       Doctor   @relation(fields: [doctorId], references: [id], onDelete: Cascade)
+
+  @@unique([doctorId, date])
+  @@map("schedule_exceptions")
+}
+
+model Appointment {
+  id                  String             @id @default(cuid())
+  bookingReference    String             @unique // e.g. ASH-2026-XXXXX
+  managementTokenHash String             // SHA-256 hashed management token
+  doctorId            String
+  serviceId           String?
+  patientName         String
+  patientPhone        String
+  patientEmail        String?
+  appointmentDate     String             // YYYY-MM-DD
+  startTime           String             // HH:MM
+  endTime             String             // HH:MM
+  status              AppointmentStatus  @default(CONFIRMED)
+  internalNotes       String?            @db.Text
+  cancellationReason  String?
+  cancelledAt         DateTime?
+  createdAt           DateTime           @default(now())
+  updatedAt           DateTime           @updatedAt
+
+  doctor              Doctor             @relation(fields: [doctorId], references: [id], onDelete: Restrict)
+  service             Service?           @relation(fields: [serviceId], references: [id], onDelete: SetNull)
+  statusHistories     AppointmentStatusHistory[]
+
+  // Concurrency exclusion constraint: cannot have two non-cancelled appointments for same doctor, date and start time
+  @@index([doctorId, appointmentDate, startTime])
+  @@index([patientPhone])
+  @@map("appointments")
+}
+
+model AppointmentStatusHistory {
+  id             String            @id @default(cuid())
+  appointmentId  String
+  previousStatus AppointmentStatus
+  newStatus      AppointmentStatus
+  changedBy      String
+  note           String?
+  timestamp      DateTime          @default(now())
+  appointment    Appointment       @relation(fields: [appointmentId], references: [id], onDelete: Cascade)
+
+  @@index([appointmentId])
+  @@map("appointment_status_histories")
+}
+
+model AuditLog {
+  id          String     @id @default(cuid())
+  action      String
+  entityType  String
+  entityId    String
+  details     String     @db.Text
+  performedBy String
+  ipAddress   String?
+  adminUserId String?
+  timestamp   DateTime   @default(now())
+  adminUser   AdminUser? @relation(fields: [adminUserId], references: [id], onDelete: SetNull)
+
+  @@index([entityType, entityId])
+  @@map("audit_logs")
+}
+
+model SiteSettings {
+  id                       String   @id @default("singleton")
+  hospitalName             String
+  address                  String
+  landmark                 String
+  phone                    String
+  alternatePhone           String?
+  emergencyPhone           String?
+  email                    String
+  slogan                   String
+  mapQuery                 String
+  consultationHoursNote    String
+  cancellationNoticeHours  Int      @default(2)
+  notificationEmailEnabled Boolean  @default(false)
+  notificationSmsEnabled   Boolean  @default(false)
+  resendApiKeyConfigured   Boolean  @default(false)
+  unverifiedDisclaimer     String
+  updatedAt                DateTime @updatedAt
+
+  @@map("site_settings")
+}
+
+model ContactMessage {
+  id        String   @id @default(cuid())
+  name      String
+  phone     String
+  email     String?
+  subject   String
+  message   String   @db.Text
+  isRead    Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  @@map("contact_messages")
+}

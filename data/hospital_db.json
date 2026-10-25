@@ -1,0 +1,1111 @@
+{
+  "adminUsers": [
+    {
+      "id": "admin-1",
+      "username": "admin",
+      "passwordHash": "453d7e9dc1e0f7f98ddf9908fd4651f85c23a73fd006f8e4df262723a14584bf878cada87903dc7101c663554fcd6a18f57a2fab498a9af908bc30c626c57842",
+      "salt": "5126ccf59dfe41a683277731cff2a8ac",
+      "name": "Dr. Administrator",
+      "role": "superadmin",
+      "createdAt": "2026-10-25T03:46:25.890Z"
+    }
+  ],
+  "doctors": [
+    {
+      "id": "doc-nandkumar-bhutada",
+      "slug": "dr-nandkumar-bhutada",
+      "name": "Dr. Nandkumar Bhutada",
+      "specialty": "Family Physician and Diabetologist",
+      "qualifications": "M.D. (Diet) (Ayu.)",
+      "experienceYears": 22,
+      "bio": "Dr. Nandkumar Bhutada brings over 22 years of clinical excellence as a Family Physician and Diabetologist, specializing in metabolic disorders, patient dietary guidance, and preventive family healthcare at Hingne Khurd, Pune.",
+      "photoUrl": "",
+      "isActive": true,
+      "consultationDurationMinutes": 15,
+      "bufferMinutes": 5,
+      "maxDailyBookings": 35,
+      "consultationFeeNote": "Verified at reception upon arrival",
+      "isVerified": true,
+      "createdAt": "2026-10-25T03:46:25.891Z",
+      "updatedAt": "2026-10-25T03:46:25.891Z"
+    },
+    {
+      "id": "doc-poonam-bhutada",
+      "slug": "dr-poonam-bhutada",
+      "name": "Dr. Poonam Bhutada",
+      "specialty": "Family Physician and Consulting Gynaecologist",
+      "qualifications": "B.A.M.S., D.Y.A. (Ayu.)",
+      "experienceYears": 20,
+      "bio": "Dr. Poonam Bhutada has served the Hingne Khurd community for 20 years, providing dedicated family medical consultations, maternal wellness guidance, and compassionate gynaecological care.",
+      "photoUrl": "",
+      "isActive": true,
+      "consultationDurationMinutes": 20,
+      "bufferMinutes": 5,
+      "maxDailyBookings": 30,
+      "consultationFeeNote": "Verified at reception upon arrival",
+      "isVerified": true,
+      "createdAt": "2026-10-25T03:46:25.891Z",
+      "updatedAt": "2026-10-25T03:46:25.891Z"
+    },
+    {
+      "id": "doc-d6832a68",
+      "slug": "dr-inactive-test",
+      "name": "Dr. Inactive Test",
+      "specialty": "Testing",
+      "qualifications": "B.A.M.S.",
+      "experienceYears": 0,
+      "bio": "",
+      "photoUrl": "",
+      "isActive": false,
+      "consultationDurationMinutes": 15,
+      "bufferMinutes": 5,
+      "maxDailyBookings": 30,
+      "consultationFeeNote": "Verified at reception",
+      "isVerified": true,
+      "createdAt": "2026-10-25T03:46:25.962Z",
+      "updatedAt": "2026-10-25T03:46:25.962Z"
+    },
+    {
+      "id": "doc-9c2b5ffe",
+      "slug": "dr-inactive-test",
+      "name": "Dr. Inactive Test",
+      "specialty": "Testing",
+      "qualifications": "B.A.M.S.",
+      "experienceYears": 0,
+      "bio": "",
+      "photoUrl": "",
+      "isActive": false,
+      "consultationDurationMinutes": 15,
+      "bufferMinutes": 5,
+      "maxDailyBookings": 30,
+      "consultationFeeNote": "Verified at reception",
+      "isVerified": true,
+      "createdAt": "2026-10-25T03:54:29.902Z",
+      "updatedAt": "2026-10-25T03:54:29.902Z"
+    },
+    {
+      "id": "doc-e3da42b6",
+      "slug": "dr-inactive-test",
+      "name": "Dr. Inactive Test",
+      "specialty": "Testing",
+      "qualifications": "B.A.M.S.",
+      "experienceYears": 0,
+      "bio": "",
+      "photoUrl": "",
+      "isActive": false,
+      "consultationDurationMinutes": 15,
+      "bufferMinutes": 5,
+      "maxDailyBookings": 30,
+      "consultationFeeNote": "Verified at reception",
+      "isVerified": true,
+      "createdAt": "2026-10-25T03:54:58.277Z",
+      "updatedAt": "2026-10-25T03:54:58.277Z"
+    },
+    {
+      "id": "doc-1f9ebf5c",
+      "slug": "dr-inactive-test",
+      "name": "Dr. Inactive Test",
+      "specialty": "Testing",
+      "qualifications": "B.A.M.S.",
+      "experienceYears": 0,
+      "bio": "",
+      "photoUrl": "",
+      "isActive": false,
+      "consultationDurationMinutes": 15,
+      "bufferMinutes": 5,
+      "maxDailyBookings": 30,
+      "consultationFeeNote": "Verified at reception",
+      "isVerified": true,
+      "createdAt": "2026-10-25T04:09:28.148Z",
+      "updatedAt": "2026-10-25T04:09:28.148Z"
+    }
+  ],
+  "weeklySchedules": [
+    {
+      "id": "sched-doc-nandkumar-bhutada",
+      "doctorId": "doc-nandkumar-bhutada",
+      "days": [
+        {
+          "dayOfWeek": 0,
+          "isWorkingDay": false,
+          "shifts": []
+        },
+        {
+          "dayOfWeek": 1,
+          "isWorkingDay": true,
+          "shifts": [
+            {
+              "startTime": "10:00",
+              "endTime": "13:00"
+            },
+            {
+              "startTime": "17:30",
+              "endTime": "20:30"
+            }
+          ]
+        },
+        {
+          "dayOfWeek": 2,
+          "isWorkingDay": true,
+          "shifts": [
+            {
+              "startTime": "10:00",
+              "endTime": "13:00"
+            },
+            {
+              "startTime": "17:30",
+              "endTime": "20:30"
+            }
+          ]
+        },
+        {
+          "dayOfWeek": 3,
+          "isWorkingDay": true,
+          "shifts": [
+            {
+              "startTime": "10:00",
+              "endTime": "13:00"
+            },
+            {
+              "startTime": "17:30",
+              "endTime": "20:30"
+            }
+          ]
+        },
+        {
+          "dayOfWeek": 4,
+          "isWorkingDay": true,
+          "shifts": [
+            {
+              "startTime": "10:00",
+              "endTime": "13:00"
+            },
+            {
+              "startTime": "17:30",
+              "endTime": "20:30"
+            }
+          ]
+        },
+        {
+          "dayOfWeek": 5,
+          "isWorkingDay": true,
+          "shifts": [
+            {
+              "startTime": "10:00",
+              "endTime": "13:00"
+            },
+            {
+              "startTime": "17:30",
+              "endTime": "20:30"
+            }
+          ]
+        },
+        {
+          "dayOfWeek": 6,
+          "isWorkingDay": true,
+          "shifts": [
+            {
+              "startTime": "10:00",
+              "endTime": "13:00"
+            },
+            {
+              "startTime": "17:30",
+              "endTime": "20:30"
+            }
+          ]
+        }
+      ],
+      "updatedAt": "2026-10-25T03:46:25.891Z"
+    },
+    {
+      "id": "sched-doc-poonam-bhutada",
+      "doctorId": "doc-poonam-bhutada",
+      "days": [
+        {
+          "dayOfWeek": 0,
+          "isWorkingDay": false,
+          "shifts": []
+        },
+        {
+          "dayOfWeek": 1,
+          "isWorkingDay": true,
+          "shifts": [
+            {
+              "startTime": "10:30",
+              "endTime": "13:30"
+            },
+            {
+              "startTime": "18:00",
+              "endTime": "20:30"
+            }
+          ]
+        },
+        {
+          "dayOfWeek": 2,
+          "isWorkingDay": true,
+          "shifts": [
+            {
+              "startTime": "10:30",
+              "endTime": "13:30"
+            },
+            {
+              "startTime": "18:00",
+              "endTime": "20:30"
+            }
+          ]
+        },
+        {
+          "dayOfWeek": 3,
+          "isWorkingDay": true,
+          "shifts": [
+            {
+              "startTime": "10:30",
+              "endTime": "13:30"
+            },
+            {
+              "startTime": "18:00",
+              "endTime": "20:30"
+            }
+          ]
+        },
+        {
+          "dayOfWeek": 4,
+          "isWorkingDay": true,
+          "shifts": [
+            {
+              "startTime": "10:30",
+              "endTime": "13:30"
+            },
+            {
+              "startTime": "18:00",
+              "endTime": "20:30"
+            }
+          ]
+        },
+        {
+          "dayOfWeek": 5,
+          "isWorkingDay": true,
+          "shifts": [
+            {
+              "startTime": "10:30",
+              "endTime": "13:30"
+            },
+            {
+              "startTime": "18:00",
+              "endTime": "20:30"
+            }
+          ]
+        },
+        {
+          "dayOfWeek": 6,
+          "isWorkingDay": true,
+          "shifts": [
+            {
+              "startTime": "10:30",
+              "endTime": "13:30"
+            },
+            {
+              "startTime": "18:00",
+              "endTime": "20:30"
+            }
+          ]
+        }
+      ],
+      "updatedAt": "2026-10-25T03:46:25.891Z"
+    },
+    {
+      "id": "sched-doc-d6832a68",
+      "doctorId": "doc-d6832a68",
+      "days": [
+        {
+          "dayOfWeek": 0,
+          "isWorkingDay": false,
+          "shifts": []
+        },
+        {
+          "dayOfWeek": 1,
+          "isWorkingDay": true,
+          "shifts": [
+            {
+              "startTime": "10:00",
+              "endTime": "13:00"
+            },
+            {
+              "startTime": "17:30",
+              "endTime": "20:30"
+            }
+          ]
+        },
+        {
+          "dayOfWeek": 2,
+          "isWorkingDay": true,
+          "shifts": [
+            {
+              "startTime": "10:00",
+              "endTime": "13:00"
+            },
+            {
+              "startTime": "17:30",
+              "endTime": "20:30"
+            }
+          ]
+        },
+        {
+          "dayOfWeek": 3,
+          "isWorkingDay": true,
+          "shifts": [
+            {
+              "startTime": "10:00",
+              "endTime": "13:00"
+            },
+            {
+              "startTime": "17:30",
+              "endTime": "20:30"
+            }
+          ]
+        },
+        {
+          "dayOfWeek": 4,
+          "isWorkingDay": true,
+          "shifts": [
+            {
+              "startTime": "10:00",
+              "endTime": "13:00"
+            },
+            {
+              "startTime": "17:30",
+              "endTime": "20:30"
+            }
+          ]
+        },
+        {
+          "dayOfWeek": 5,
+          "isWorkingDay": true,
+          "shifts": [
+            {
+              "startTime": "10:00",
+              "endTime": "13:00"
+            },
+            {
+              "startTime": "17:30",
+              "endTime": "20:30"
+            }
+          ]
+        },
+        {
+          "dayOfWeek": 6,
+          "isWorkingDay": true,
+          "shifts": [
+            {
+              "startTime": "10:00",
+              "endTime": "13:00"
+            },
+            {
+              "startTime": "17:30",
+              "endTime": "20:30"
+            }
+          ]
+        }
+      ],
+      "updatedAt": "2026-10-25T03:46:25.962Z"
+    },
+    {
+      "id": "sched-doc-9c2b5ffe",
+      "doctorId": "doc-9c2b5ffe",
+      "days": [
+        {
+          "dayOfWeek": 0,
+          "isWorkingDay": false,
+          "shifts": []
+        },
+        {
+          "dayOfWeek": 1,
+          "isWorkingDay": true,
+          "shifts": [
+            {
+              "startTime": "10:00",
+              "endTime": "13:00"
+            },
+            {
+              "startTime": "17:30",
+              "endTime": "20:30"
+            }
+          ]
+        },
+        {
+          "dayOfWeek": 2,
+          "isWorkingDay": true,
+          "shifts": [
+            {
+              "startTime": "10:00",
+              "endTime": "13:00"
+            },
+            {
+              "startTime": "17:30",
+              "endTime": "20:30"
+            }
+          ]
+        },
+        {
+          "dayOfWeek": 3,
+          "isWorkingDay": true,
+          "shifts": [
+            {
+              "startTime": "10:00",
+              "endTime": "13:00"
+            },
+            {
+              "startTime": "17:30",
+              "endTime": "20:30"
+            }
+          ]
+        },
+        {
+          "dayOfWeek": 4,
+          "isWorkingDay": true,
+          "shifts": [
+            {
+              "startTime": "10:00",
+              "endTime": "13:00"
+            },
+            {
+              "startTime": "17:30",
+              "endTime": "20:30"
+            }
+          ]
+        },
+        {
+          "dayOfWeek": 5,
+          "isWorkingDay": true,
+          "shifts": [
+            {
+              "startTime": "10:00",
+              "endTime": "13:00"
+            },
+            {
+              "startTime": "17:30",
+              "endTime": "20:30"
+            }
+          ]
+        },
+        {
+          "dayOfWeek": 6,
+          "isWorkingDay": true,
+          "shifts": [
+            {
+              "startTime": "10:00",
+              "endTime": "13:00"
+            },
+            {
+              "startTime": "17:30",
+              "endTime": "20:30"
+            }
+          ]
+        }
+      ],
+      "updatedAt": "2026-10-25T03:54:29.902Z"
+    },
+    {
+      "id": "sched-doc-e3da42b6",
+      "doctorId": "doc-e3da42b6",
+      "days": [
+        {
+          "dayOfWeek": 0,
+          "isWorkingDay": false,
+          "shifts": []
+        },
+        {
+          "dayOfWeek": 1,
+          "isWorkingDay": true,
+          "shifts": [
+            {
+              "startTime": "10:00",
+              "endTime": "13:00"
+            },
+            {
+              "startTime": "17:30",
+              "endTime": "20:30"
+            }
+          ]
+        },
+        {
+          "dayOfWeek": 2,
+          "isWorkingDay": true,
+          "shifts": [
+            {
+              "startTime": "10:00",
+              "endTime": "13:00"
+            },
+            {
+              "startTime": "17:30",
+              "endTime": "20:30"
+            }
+          ]
+        },
+        {
+          "dayOfWeek": 3,
+          "isWorkingDay": true,
+          "shifts": [
+            {
+              "startTime": "10:00",
+              "endTime": "13:00"
+            },
+            {
+              "startTime": "17:30",
+              "endTime": "20:30"
+            }
+          ]
+        },
+        {
+          "dayOfWeek": 4,
+          "isWorkingDay": true,
+          "shifts": [
+            {
+              "startTime": "10:00",
+              "endTime": "13:00"
+            },
+            {
+              "startTime": "17:30",
+              "endTime": "20:30"
+            }
+          ]
+        },
+        {
+          "dayOfWeek": 5,
+          "isWorkingDay": true,
+          "shifts": [
+            {
+              "startTime": "10:00",
+              "endTime": "13:00"
+            },
+            {
+              "startTime": "17:30",
+              "endTime": "20:30"
+            }
+          ]
+        },
+        {
+          "dayOfWeek": 6,
+          "isWorkingDay": true,
+          "shifts": [
+            {
+              "startTime": "10:00",
+              "endTime": "13:00"
+            },
+            {
+              "startTime": "17:30",
+              "endTime": "20:30"
+            }
+          ]
+        }
+      ],
+      "updatedAt": "2026-10-25T03:54:58.277Z"
+    },
+    {
+      "id": "sched-doc-1f9ebf5c",
+      "doctorId": "doc-1f9ebf5c",
+      "days": [
+        {
+          "dayOfWeek": 0,
+          "isWorkingDay": false,
+          "shifts": []
+        },
+        {
+          "dayOfWeek": 1,
+          "isWorkingDay": true,
+          "shifts": [
+            {
+              "startTime": "10:00",
+              "endTime": "13:00"
+            },
+            {
+              "startTime": "17:30",
+              "endTime": "20:30"
+            }
+          ]
+        },
+        {
+          "dayOfWeek": 2,
+          "isWorkingDay": true,
+          "shifts": [
+            {
+              "startTime": "10:00",
+              "endTime": "13:00"
+            },
+            {
+              "startTime": "17:30",
+              "endTime": "20:30"
+            }
+          ]
+        },
+        {
+          "dayOfWeek": 3,
+          "isWorkingDay": true,
+          "shifts": [
+            {
+              "startTime": "10:00",
+              "endTime": "13:00"
+            },
+            {
+              "startTime": "17:30",
+              "endTime": "20:30"
+            }
+          ]
+        },
+        {
+          "dayOfWeek": 4,
+          "isWorkingDay": true,
+          "shifts": [
+            {
+              "startTime": "10:00",
+              "endTime": "13:00"
+            },
+            {
+              "startTime": "17:30",
+              "endTime": "20:30"
+            }
+          ]
+        },
+        {
+          "dayOfWeek": 5,
+          "isWorkingDay": true,
+          "shifts": [
+            {
+              "startTime": "10:00",
+              "endTime": "13:00"
+            },
+            {
+              "startTime": "17:30",
+              "endTime": "20:30"
+            }
+          ]
+        },
+        {
+          "dayOfWeek": 6,
+          "isWorkingDay": true,
+          "shifts": [
+            {
+              "startTime": "10:00",
+              "endTime": "13:00"
+            },
+            {
+              "startTime": "17:30",
+              "endTime": "20:30"
+            }
+          ]
+        }
+      ],
+      "updatedAt": "2026-10-25T04:09:28.148Z"
+    }
+  ],
+  "scheduleExceptions": [
+    {
+      "id": "ex-9ec792d3",
+      "createdAt": "2026-10-25T03:46:25.964Z",
+      "doctorId": "doc-nandkumar-bhutada",
+      "date": "2026-11-15",
+      "isDayOff": true,
+      "reason": "Diwali Hospital Holiday"
+    },
+    {
+      "id": "ex-3ca284ec",
+      "createdAt": "2026-10-25T03:54:29.904Z",
+      "doctorId": "doc-nandkumar-bhutada",
+      "date": "2026-11-15",
+      "isDayOff": true,
+      "reason": "Diwali Hospital Holiday"
+    },
+    {
+      "id": "ex-f514df13",
+      "createdAt": "2026-10-25T03:54:58.279Z",
+      "doctorId": "doc-nandkumar-bhutada",
+      "date": "2026-11-15",
+      "isDayOff": true,
+      "reason": "Diwali Hospital Holiday"
+    },
+    {
+      "id": "ex-4b708418",
+      "createdAt": "2026-10-25T04:09:28.149Z",
+      "doctorId": "doc-nandkumar-bhutada",
+      "date": "2026-11-15",
+      "isDayOff": true,
+      "reason": "Diwali Hospital Holiday"
+    }
+  ],
+  "services": [
+    {
+      "id": "srv-1",
+      "slug": "general-family-medicine",
+      "title": "General Family Medicine & Primary Care",
+      "category": "Family Healthcare",
+      "description": "Comprehensive primary diagnosis, treatment of acute infections, routine medical checkups, and preventive care for all age groups.",
+      "isPublished": true,
+      "requiresHospitalConfirmation": false,
+      "durationMinutes": 15,
+      "assignedDoctorIds": [
+        "doc-nandkumar-bhutada",
+        "doc-poonam-bhutada"
+      ],
+      "createdAt": "2026-10-25T03:46:25.891Z",
+      "updatedAt": "2026-10-25T03:46:25.891Z"
+    },
+    {
+      "id": "srv-2",
+      "slug": "diabetes-metabolic-care",
+      "title": "Diabetology & Metabolic Health",
+      "category": "Chronic Care",
+      "description": "Personalized dietary planning, blood sugar management, lifestyle guidance, and regular diabetic monitoring by Dr. Nandkumar Bhutada.",
+      "isPublished": true,
+      "requiresHospitalConfirmation": false,
+      "durationMinutes": 15,
+      "assignedDoctorIds": [
+        "doc-nandkumar-bhutada"
+      ],
+      "createdAt": "2026-10-25T03:46:25.891Z",
+      "updatedAt": "2026-10-25T03:46:25.891Z"
+    },
+    {
+      "id": "srv-3",
+      "slug": "gynaecology-womens-wellness",
+      "title": "Women’s Health & Gynaecological Consultation",
+      "category": "Gynaecology",
+      "description": "Consultations on reproductive health, menstrual irregularities, pre- and post-natal advice, and adolescent female wellness with Dr. Poonam Bhutada.",
+      "isPublished": true,
+      "requiresHospitalConfirmation": false,
+      "durationMinutes": 20,
+      "assignedDoctorIds": [
+        "doc-poonam-bhutada"
+      ],
+      "createdAt": "2026-10-25T03:46:25.891Z",
+      "updatedAt": "2026-10-25T03:46:25.891Z"
+    },
+    {
+      "id": "srv-4",
+      "slug": "ayurvedic-diet-lifestyle",
+      "title": "Ayurvedic Diet & Lifestyle Counseling",
+      "category": "Nutritional Care (Draft)",
+      "description": "Holistic dietary regimens customized according to constitution and health conditions. (Draft category requires hospital review).",
+      "isPublished": false,
+      "requiresHospitalConfirmation": true,
+      "durationMinutes": 20,
+      "assignedDoctorIds": [
+        "doc-nandkumar-bhutada"
+      ],
+      "createdAt": "2026-10-25T03:46:25.891Z",
+      "updatedAt": "2026-10-25T03:46:25.891Z"
+    }
+  ],
+  "appointments": [
+    {
+      "id": "apt-c91cdb0d89d5",
+      "bookingReference": "ASH-2026-58323",
+      "managementTokenHash": "41718061954872172795057848b5f3ffb17340da061cec390137c3799574633a",
+      "doctorId": "doc-nandkumar-bhutada",
+      "doctorName": "Dr. Nandkumar Bhutada",
+      "patientName": "Test Patient Kumar",
+      "patientPhone": "9822333770",
+      "patientEmail": "patient.test@example.com",
+      "appointmentDate": "2026-11-02",
+      "startTime": "10:00",
+      "endTime": "10:15",
+      "status": "Completed",
+      "createdAt": "2026-10-25T03:46:25.956Z",
+      "updatedAt": "2026-10-25T03:46:26.144Z"
+    },
+    {
+      "id": "apt-d301f953349a",
+      "bookingReference": "ASH-2026-45605",
+      "managementTokenHash": "92c40b341e93e948dfebeba9ade82f6fc3b266f200568a2db9e11d1f816d9459",
+      "doctorId": "doc-nandkumar-bhutada",
+      "doctorName": "Dr. Nandkumar Bhutada",
+      "patientName": "Test Patient Kumar",
+      "patientPhone": "9822333770",
+      "patientEmail": "patient.test@example.com",
+      "appointmentDate": "2026-11-02",
+      "startTime": "10:20",
+      "endTime": "10:35",
+      "status": "Completed",
+      "createdAt": "2026-10-25T03:54:29.895Z",
+      "updatedAt": "2026-10-25T03:54:30.110Z"
+    },
+    {
+      "id": "apt-eff5c7539c12",
+      "bookingReference": "ASH-2026-75822",
+      "managementTokenHash": "d9a9f8653a1eba34eca4d01f1d5aa6f91c0dae43fb4b1e9082653beda9b934c9",
+      "doctorId": "doc-nandkumar-bhutada",
+      "doctorName": "Dr. Nandkumar Bhutada",
+      "patientName": "Test Patient Kumar",
+      "patientPhone": "9822333770",
+      "patientEmail": "patient.test@example.com",
+      "appointmentDate": "2026-11-02",
+      "startTime": "10:40",
+      "endTime": "10:55",
+      "status": "Completed",
+      "createdAt": "2026-10-25T03:54:58.272Z",
+      "updatedAt": "2026-10-25T03:54:58.483Z"
+    },
+    {
+      "id": "apt-d1fa00c1fab8",
+      "bookingReference": "ASH-2026-91843",
+      "managementTokenHash": "3478c35bfcd8ee44798e6eaf04206e86ec4b2a7c3541e31054a93757d28334c5",
+      "doctorId": "doc-nandkumar-bhutada",
+      "doctorName": "Dr. Nandkumar Bhutada",
+      "patientName": "Test Patient Kumar",
+      "patientPhone": "9822333770",
+      "patientEmail": "patient.test@example.com",
+      "appointmentDate": "2026-11-02",
+      "startTime": "11:00",
+      "endTime": "11:15",
+      "status": "Completed",
+      "createdAt": "2026-10-25T04:09:28.142Z",
+      "updatedAt": "2026-10-25T04:09:28.360Z"
+    }
+  ],
+  "appointmentStatusHistories": [
+    {
+      "id": "hist-02c77f9e",
+      "appointmentId": "apt-c91cdb0d89d5",
+      "previousStatus": "Pending",
+      "newStatus": "Confirmed",
+      "changedBy": "Patient Web Booking",
+      "note": "Self-booked by patient via public portal. Ref: ASH-2026-58323",
+      "timestamp": "2026-10-25T03:46:25.956Z"
+    },
+    {
+      "id": "hist-713bd781",
+      "appointmentId": "apt-c91cdb0d89d5",
+      "previousStatus": "Confirmed",
+      "newStatus": "Completed",
+      "changedBy": "Dr. Nandkumar Bhutada",
+      "note": "Consultation finished",
+      "timestamp": "2026-10-25T03:46:26.144Z"
+    },
+    {
+      "id": "hist-60349de9",
+      "appointmentId": "apt-d301f953349a",
+      "previousStatus": "Pending",
+      "newStatus": "Confirmed",
+      "changedBy": "Patient Web Booking",
+      "note": "Self-booked by patient via public portal. Ref: ASH-2026-45605",
+      "timestamp": "2026-10-25T03:54:29.895Z"
+    },
+    {
+      "id": "hist-c3fb8edf",
+      "appointmentId": "apt-d301f953349a",
+      "previousStatus": "Confirmed",
+      "newStatus": "Completed",
+      "changedBy": "Dr. Nandkumar Bhutada",
+      "note": "Consultation finished",
+      "timestamp": "2026-10-25T03:54:30.110Z"
+    },
+    {
+      "id": "hist-eb329328",
+      "appointmentId": "apt-eff5c7539c12",
+      "previousStatus": "Pending",
+      "newStatus": "Confirmed",
+      "changedBy": "Patient Web Booking",
+      "note": "Self-booked by patient via public portal. Ref: ASH-2026-75822",
+      "timestamp": "2026-10-25T03:54:58.272Z"
+    },
+    {
+      "id": "hist-bf91fab1",
+      "appointmentId": "apt-eff5c7539c12",
+      "previousStatus": "Confirmed",
+      "newStatus": "Completed",
+      "changedBy": "Dr. Nandkumar Bhutada",
+      "note": "Consultation finished",
+      "timestamp": "2026-10-25T03:54:58.483Z"
+    },
+    {
+      "id": "hist-1a5c0d27",
+      "appointmentId": "apt-d1fa00c1fab8",
+      "previousStatus": "Pending",
+      "newStatus": "Confirmed",
+      "changedBy": "Patient Web Booking",
+      "note": "Self-booked by patient via public portal. Ref: ASH-2026-91843",
+      "timestamp": "2026-10-25T04:09:28.142Z"
+    },
+    {
+      "id": "hist-da607a4d",
+      "appointmentId": "apt-d1fa00c1fab8",
+      "previousStatus": "Confirmed",
+      "newStatus": "Completed",
+      "changedBy": "Dr. Nandkumar Bhutada",
+      "note": "Consultation finished",
+      "timestamp": "2026-10-25T04:09:28.360Z"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "log-init",
+      "action": "SYSTEM_INITIALIZED",
+      "entityType": "System",
+      "entityId": "aashirwad-core",
+      "details": "Initial system seeded with verified hospital profiles and admin account.",
+      "performedBy": "System Bootstrap",
+      "timestamp": "2026-10-25T03:46:25.891Z"
+    },
+    {
+      "id": "log-cf8b7902",
+      "timestamp": "2026-10-25T03:46:25.956Z",
+      "action": "BOOK_APPOINTMENT",
+      "entityType": "Appointment",
+      "entityId": "apt-c91cdb0d89d5",
+      "details": "Appointment booked: Ref ASH-2026-58323 with Dr. Nandkumar Bhutada on 2026-11-02 at 10:00 for patient Test Patient Kumar (******3770)",
+      "performedBy": "Patient Portal"
+    },
+    {
+      "id": "log-7e115dfe",
+      "timestamp": "2026-10-25T03:46:25.963Z",
+      "action": "CREATE_DOCTOR",
+      "entityType": "Doctor",
+      "entityId": "doc-d6832a68",
+      "details": "Created doctor profile: Dr. Inactive Test",
+      "performedBy": "test-runner"
+    },
+    {
+      "id": "log-ca379a62",
+      "timestamp": "2026-10-25T03:46:25.964Z",
+      "action": "ADD_SCHEDULE_EXCEPTION",
+      "entityType": "ScheduleException",
+      "entityId": "ex-9ec792d3",
+      "details": "Added schedule exception for doctor doc-nandkumar-bhutada on 2026-11-15: Diwali Hospital Holiday",
+      "performedBy": "test-runner"
+    },
+    {
+      "id": "log-c41c22c3",
+      "timestamp": "2026-10-25T03:46:26.144Z",
+      "action": "UPDATE_APPOINTMENT_STATUS",
+      "entityType": "Appointment",
+      "entityId": "apt-c91cdb0d89d5",
+      "details": "Status of ASH-2026-58323 changed from Confirmed to Completed by Dr. Nandkumar Bhutada",
+      "performedBy": "Dr. Nandkumar Bhutada"
+    },
+    {
+      "id": "log-128ff5af",
+      "timestamp": "2026-10-25T03:54:29.896Z",
+      "action": "BOOK_APPOINTMENT",
+      "entityType": "Appointment",
+      "entityId": "apt-d301f953349a",
+      "details": "Appointment booked: Ref ASH-2026-45605 with Dr. Nandkumar Bhutada on 2026-11-02 at 10:20 for patient Test Patient Kumar (******3770)",
+      "performedBy": "Patient Portal"
+    },
+    {
+      "id": "log-21c31ce0",
+      "timestamp": "2026-10-25T03:54:29.902Z",
+      "action": "CREATE_DOCTOR",
+      "entityType": "Doctor",
+      "entityId": "doc-9c2b5ffe",
+      "details": "Created doctor profile: Dr. Inactive Test",
+      "performedBy": "test-runner"
+    },
+    {
+      "id": "log-4ad7c556",
+      "timestamp": "2026-10-25T03:54:29.904Z",
+      "action": "ADD_SCHEDULE_EXCEPTION",
+      "entityType": "ScheduleException",
+      "entityId": "ex-3ca284ec",
+      "details": "Added schedule exception for doctor doc-nandkumar-bhutada on 2026-11-15: Diwali Hospital Holiday",
+      "performedBy": "test-runner"
+    },
+    {
+      "id": "log-96f07ba4",
+      "timestamp": "2026-10-25T03:54:30.110Z",
+      "action": "UPDATE_APPOINTMENT_STATUS",
+      "entityType": "Appointment",
+      "entityId": "apt-d301f953349a",
+      "details": "Status of ASH-2026-45605 changed from Confirmed to Completed by Dr. Nandkumar Bhutada",
+      "performedBy": "Dr. Nandkumar Bhutada"
+    },
+    {
+      "id": "log-ae555ee6",
+      "timestamp": "2026-10-25T03:54:58.272Z",
+      "action": "BOOK_APPOINTMENT",
+      "entityType": "Appointment",
+      "entityId": "apt-eff5c7539c12",
+      "details": "Appointment booked: Ref ASH-2026-75822 with Dr. Nandkumar Bhutada on 2026-11-02 at 10:40 for patient Test Patient Kumar (******3770)",
+      "performedBy": "Patient Portal"
+    },
+    {
+      "id": "log-805a4da1",
+      "timestamp": "2026-10-25T03:54:58.277Z",
+      "action": "CREATE_DOCTOR",
+      "entityType": "Doctor",
+      "entityId": "doc-e3da42b6",
+      "details": "Created doctor profile: Dr. Inactive Test",
+      "performedBy": "test-runner"
+    },
+    {
+      "id": "log-0e32217b",
+      "timestamp": "2026-10-25T03:54:58.279Z",
+      "action": "ADD_SCHEDULE_EXCEPTION",
+      "entityType": "ScheduleException",
+      "entityId": "ex-f514df13",
+      "details": "Added schedule exception for doctor doc-nandkumar-bhutada on 2026-11-15: Diwali Hospital Holiday",
+      "performedBy": "test-runner"
+    },
+    {
+      "id": "log-8af68d07",
+      "timestamp": "2026-10-25T03:54:58.483Z",
+      "action": "UPDATE_APPOINTMENT_STATUS",
+      "entityType": "Appointment",
+      "entityId": "apt-eff5c7539c12",
+      "details": "Status of ASH-2026-75822 changed from Confirmed to Completed by Dr. Nandkumar Bhutada",
+      "performedBy": "Dr. Nandkumar Bhutada"
+    },
+    {
+      "id": "log-c0bf6a40",
+      "timestamp": "2026-10-25T04:09:28.142Z",
+      "action": "BOOK_APPOINTMENT",
+      "entityType": "Appointment",
+      "entityId": "apt-d1fa00c1fab8",
+      "details": "Appointment booked: Ref ASH-2026-91843 with Dr. Nandkumar Bhutada on 2026-11-02 at 11:00 for patient Test Patient Kumar (******3770)",
+      "performedBy": "Patient Portal"
+    },
+    {
+      "id": "log-73d8b41b",
+      "timestamp": "2026-10-25T04:09:28.148Z",
+      "action": "CREATE_DOCTOR",
+      "entityType": "Doctor",
+      "entityId": "doc-1f9ebf5c",
+      "details": "Created doctor profile: Dr. Inactive Test",
+      "performedBy": "test-runner"
+    },
+    {
+      "id": "log-f422eba4",
+      "timestamp": "2026-10-25T04:09:28.149Z",
+      "action": "ADD_SCHEDULE_EXCEPTION",
+      "entityType": "ScheduleException",
+      "entityId": "ex-4b708418",
+      "details": "Added schedule exception for doctor doc-nandkumar-bhutada on 2026-11-15: Diwali Hospital Holiday",
+      "performedBy": "test-runner"
+    },
+    {
+      "id": "log-b61de437",
+      "timestamp": "2026-10-25T04:09:28.360Z",
+      "action": "UPDATE_APPOINTMENT_STATUS",
+      "entityType": "Appointment",
+      "entityId": "apt-d1fa00c1fab8",
+      "details": "Status of ASH-2026-91843 changed from Confirmed to Completed by Dr. Nandkumar Bhutada",
+      "performedBy": "Dr. Nandkumar Bhutada"
+    }
+  ],
+  "siteSettings": {
+    "hospitalName": "Aashirwad Hospital",
+    "address": "213/26, Ram Mandir Temple Lane, Damodar Nagar Road, near Rokdoba Temple, Hingne Khurd, Pune, Maharashtra 411051, India",
+    "landmark": "Near Rokdoba Temple, Ram Mandir Temple Lane, Damodar Nagar",
+    "phone": "+91 9822333770",
+    "alternatePhone": "",
+    "emergencyPhone": "",
+    "email": "contact@aashirwadhospitalpune.in",
+    "slogan": "Your Health, Our Priority.",
+    "mapQuery": "Aashirwad Hospital Hingne Khurd Pune Maharashtra",
+    "consultationHoursNote": "Monday to Saturday: Morning 10:00 AM - 1:30 PM, Evening 5:30 PM - 8:30 PM. Sunday Closed.",
+    "cancellationNoticeHours": 2,
+    "notificationEmailEnabled": false,
+    "notificationSmsEnabled": false,
+    "resendApiKeyConfigured": false,
+    "unverifiedDisclaimer": "Information marked unverified requires confirmation by hospital staff prior to public notice."
+  },
+  "contactMessages": []
+}

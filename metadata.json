@@ -1,0 +1,6 @@
+{
+  "name": "Aashirwad Hospital - Pune",
+  "description": "Official website and appointment management system for Aashirwad Hospital, Hingne Khurd, Pune. Book appointments, view doctor profiles, and manage clinical schedules.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
